@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch Checkpoints & Large Latent Caches (>100MB exceeds GitHub push limit)
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Datasets
+data/
+*.tar.gz
+*.zip
+
+# Virtual Environments
+venv/
+env/
+.env
+my_env/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
