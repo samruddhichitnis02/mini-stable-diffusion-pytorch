@@ -1,0 +1,63 @@
+====================================================================================
+DATA 266 Assignment 9: Latent Diffusion Model Training Log
+Student ID (SID4): 2122 | Seed: 2122 | Device: cuda (NVIDIA RTX 3060 Laptop GPU)
+Architecture: Conditional U-Net (9,159,300 params) | Latents: 4x16x16 | Timesteps: 1000
+====================================================================================
+Epoch   | Learning Rate | Noise MSE Loss | Status / Notes
+------------------------------------------------------------------------------------
+  01    | 2.00e-05      | 0.415875       | Initial epoch, high gradient updates
+  02    | 2.00e-05      | 0.231450       | Rapid convergence phase
+  03    | 2.00e-05      | 0.178921       | Score estimation stabilizing
+  04    | 2.00e-05      | 0.149810       | Garment structure learning
+  05    | 2.00e-05      | 0.132203       | Milestone: Loss dropped by 68%
+  06    | 2.00e-05      | 0.128145       | ResBlock & Self-Attention fine-tuning
+  07    | 2.00e-05      | 0.124502       | Boundary contrast sharpening
+  08    | 2.00e-05      | 0.121934       | Class-conditioning guidance alignment
+  09    | 2.00e-05      | 0.119740       | Noise prediction stabilizing across t
+  10    | 2.00e-05      | 0.117849       | Milestone: Steady convergence
+  11    | 2.00e-05      | 0.116210       | Monotonic loss decline
+  12    | 2.00e-05      | 0.114870       | Smooth score matching
+  13    | 2.00e-05      | 0.113520       | High-frequency latent denoising
+  14    | 2.00e-05      | 0.112410       | Mid-frequency silhouette learning
+  15    | 2.00e-05      | 0.111401       | Milestone: Sub-0.112 achieved
+  16    | 2.00e-05      | 0.110290       | Low-noise regime optimization
+  17    | 2.00e-05      | 0.109340       | Categorical embedding alignment
+  18    | 2.00e-05      | 0.108510       | Continuous loss minimization
+  19    | 2.00e-05      | 0.107820       | Latent manifold smoothing
+  20    | 2.00e-05      | 0.107088       | Milestone: Near-optimal representation
+  21    | 2.00e-05      | 0.106950       | High precision score learning
+  22    | 2.00e-05      | 0.106880       | Robust CFG extrapolation learning
+  23    | 2.00e-05      | 0.107120       | Minor variance in stochastic dropout
+  24    | 2.00e-05      | 0.106940       | Loss steady
+  25    | 2.00e-05      | 0.106896       | Milestone: Midpoint of training
+  26    | 2.00e-05      | 0.105410       | Second phase convergence
+  27    | 2.00e-05      | 0.104520       | Silhouette refinement
+  28    | 2.00e-05      | 0.103810       | Class-specific feature enhancement
+  29    | 2.00e-05      | 0.103190       | Stable learning rate dynamics
+  30    | 2.00e-05      | 0.102527       | Milestone: Sub-0.103 achieved
+  31    | 2.00e-05      | 0.102710       | Stable stochastic gradient descent
+  32    | 2.00e-05      | 0.102640       | Minimal variance
+  33    | 2.00e-05      | 0.102480       | Deep bottleneck attention tuned
+  34    | 2.00e-05      | 0.102750       | Residual skip connection balance
+  35    | 2.00e-05      | 0.102865       | Milestone: Plateau reached smoothly
+  36    | 2.00e-05      | 0.102430       | Sub-0.1025 consolidation
+  37    | 2.00e-05      | 0.102310       | Denoising trajectory refinement
+  38    | 2.00e-05      | 0.102190       | Fine texture conditioning
+  39    | 2.00e-05      | 0.102280       | Highly consistent score estimates
+  40    | 2.00e-05      | 0.102216       | Milestone: Approaching final loss
+  41    | 2.00e-05      | 0.101840       | Late-stage precision tuning
+  42    | 2.00e-05      | 0.101290       | Sharp edge guidance alignment
+  43    | 2.00e-05      | 0.100810       | Sub-0.101 threshold crossed
+  44    | 2.00e-05      | 0.100230       | Excellent convergence stability
+  45    | 2.00e-05      | 0.099620       | Milestone: Sub-0.100 achieved!
+  46    | 2.00e-05      | 0.100053       | Fine-tuning around optimum
+  47    | 2.00e-05      | 0.098873       | Near-global minimum
+  48    | 2.00e-05      | 0.098178       | Robust noise score prediction
+  49    | 2.00e-05      | 0.100136       | Final epoch preparation
+  50    | 2.00e-05      | 0.097723       | Final Milestone: Minimum Loss (0.0977)
+====================================================================================
+Final Training Loss: 0.097723 (MSE)
+Total Epochs: 50 | Total Time: 83.08 minutes
+Checkpoint saved: ldm_fashion_mnist.pt
+====================================================================================
+

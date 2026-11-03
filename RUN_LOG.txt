@@ -1,0 +1,58 @@
+==================================================
+DATA 266 Assignment 9: Latent Diffusion Model (LDM)
+Student ID (SID4): 2122 | Seed: 2122 | Device: cuda
+PyTorch Version: 2.8.0+cu128
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU
+==================================================
+Loading pretrained VAE 'stabilityai/sd-vae-ft-mse' on cuda...
+
+--- Part 1: VAE Reconstruction Verification ---
+[VAE Verification] Reconstruction MSE on 8 sample images: 0.000886
+Saved VAE reconstruction comparison to 'vae_reconstruction.png'.
+
+--- Part 2: Forward Diffusion in Latent Space ---
+Saved forward diffusion latent visualization to 'forward_diffusion_latents_decoded.png'.
+
+--- Part 3: Dataset Preparation & Caching ---
+Precomputing VAE latents with GPU-accelerated pipeline (this runs once)...
+Saving cached latents: Train torch.Size([60000, 4, 16, 16]), Test torch.Size([10000, 4, 16, 16])
+
+--- Part 4: Conditional U-Net Initialization & Training ---
+Instantiated LatentUNet: 9,159,300 parameters.
+
+==========================================
+Starting LDM Training: 50 Epochs, LR: 2e-05, Device: cuda
+CFG Label Dropout Probability: 0.1, Null Label: 10
+==========================================
+Epoch [01/50] - Loss: 0.415875 - Time: 39.45s
+Epoch [05/50] - Loss: 0.132203 - Time: 37.31s
+Epoch [10/50] - Loss: 0.117849 - Time: 37.63s
+Epoch [15/50] - Loss: 0.111401 - Time: 38.35s
+Epoch [20/50] - Loss: 0.107088 - Time: 35.80s
+Epoch [25/50] - Loss: 0.106896 - Time: 219.47s
+Epoch [30/50] - Loss: 0.102527 - Time: 36.39s
+Epoch [35/50] - Loss: 0.102865 - Time: 40.34s
+Epoch [40/50] - Loss: 0.102216 - Time: 37.51s
+Epoch [45/50] - Loss: 0.099620 - Time: 35.92s
+Epoch [50/50] - Loss: 0.097723 - Time: 37.05s
+
+Training completed in 4984.66 seconds (83.08 minutes).
+Saved trained model checkpoint to 'ldm_fashion_mnist.pt'.
+Saved training loss history to 'training_loss.csv'.
+Saved loss curve to 'training_loss.png'.
+
+--- Part 5: Sampling with Classifier-Free Guidance ---
+Generating 64-image sample grid with CFG guidance scale w = 3.0...
+Saved 64-image sample grid to 'sample_grid_64.png'.
+
+--- Part 6: CFG Guidance Scale Ablation ---
+Generating samples for CFG scale w = 0.0...
+Generating samples for CFG scale w = 1.0...
+Generating samples for CFG scale w = 3.0...
+Saved guidance scale comparison to 'guidance_scale_comparison.png'.
+Saved quantitative metrics to 'metrics.json'.
+Saved markdown metrics report to 'metrics.md'.
+
+==================================================
+All Assignment 9 experiments completed successfully!
+==================================================
